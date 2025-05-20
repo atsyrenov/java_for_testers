@@ -14,6 +14,11 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
+tasks.withType(JavaExec) {
+    systemProperty "file.encoding", "UTF-8"
+    systemProperty "sun.jnu.encoding", "UTF-8"
+}
+
 test {
     useJUnitPlatform()
 }
